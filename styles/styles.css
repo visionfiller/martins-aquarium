@@ -74,8 +74,14 @@ body {
 .asideInfo {
     padding: 1em;
     color: yellow;
+    
 }
-.container {
+.fishInfo, .asideInfo {
+    height:100%;
+    width: auto;
+}
+
+.wholeContainer {
     display: flex;
     
 }
