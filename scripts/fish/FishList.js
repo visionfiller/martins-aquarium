@@ -1,5 +1,6 @@
 // Import the function that returns a copy of the fish array
 import { getFish } from './database.js'
+import { getFishTips } from './database.js'
 
 export const FishList = () => {
     // Invoke the function that you imported from the database module
@@ -30,6 +31,28 @@ export const FishList = () => {
 
 }
 
+export const fishTipsList = () => {
+    const tips = getFishTips()
+let htmlString = ``
+
+        for (const tip of tips) {
+           htmlString += 
+          ` <section class ="fish">
+            <div class= "fishInfo asideInfo">
+                <h3>Fish Caretaking Tips:</h3>
+            <ul>
+                    <li> ${tip.tipOne}</li>
+                    <li> ${tip.tipTwo}</li>
+                    <li> ${tip.tipThree}</li>
+                    <li> ${tip.tipThree}</li>
+                </ul>
+                </div>
+        </section>`
+        }
+       
+        
+return htmlString
+}
 /*
 <section class="fish" id="1">
                 <div class="fishImage">
@@ -44,4 +67,20 @@ export const FishList = () => {
                     <p>diet: small fish and crustaceans</p>
                 </div>
             </section>
+
+
+
+            <section class="fish" id="1">
+            <div class="fishInfo asideInfo">
+                <h3>Fish Caretaking Tips:</h3>
+                <ul>
+                    <li> Keep tank at 212 degrees</li>
+                    <li> Feed newly born snakes</li>
+                    </lie>
+                    <li>Play ABBA 24 hours a day</li>
+                    <li> Likes to fight</li>
+                </ul>
+
+            </div>
+        </section>
             */
